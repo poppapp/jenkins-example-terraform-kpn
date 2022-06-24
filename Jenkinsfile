@@ -14,6 +14,11 @@ pipeline {
         checkout scm
       }
     }
+	stage('declare aws vars') {
+      steps {
+		sh 'echo to-be-filled'
+      }
+    }
     stage('terraform') {
       steps {
         sh './terraformw apply -auto-approve -no-color'
